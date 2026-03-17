@@ -10,9 +10,16 @@ class SecondScreen extends StatefulWidget {
 }
 
 class _SecondScreenState extends State<SecondScreen> {
+  double result = 0;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    var result = context.watch<CounterProvider>().result;
+    result = context.watch<CounterProvider>().result;
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Second Flutter Screen'),
